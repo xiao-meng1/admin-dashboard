@@ -173,10 +173,12 @@ html, body, #body-container {
 
 .main-content > .projects-area {
     grid-area: projects;
+    display: grid;
+    align-content: start;
+    gap: 10px;
 }
 
 .main-content > .projects-area > .projects-container {
-    grid-area: projects;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     grid-template-rows: 220px;
@@ -185,8 +187,20 @@ html, body, #body-container {
 }
 
 .main-content >.projects-area .project-card {
+    display: grid;
+    align-content: space-between;
     border-radius: 10px;
     background-color: var(--white-color);
+    border-left: solid var(--yellow-color) 10px;
+    padding: 30px 20px;
+}
+
+.main-content > .projects-area .icons-container {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: end;
+    gap: 40px;
+    padding-right: 10px;
 }
 
 .main-content > .right-sidebar {
@@ -196,9 +210,21 @@ html, body, #body-container {
     gap: 20px;
 }
 
+.main-content > .right-sidebar > .announcements-area {
+    display: grid;
+    align-content: start;
+    gap: 10px;
+}
+
 .main-content > .right-sidebar .announcement {
     padding: 20px;
     background-color: var(--white-color);
+}
+
+.main-content > .right-sidebar > .trending-area {
+    display: grid;
+    align-content: start;
+    gap: 10px;
 }
 
 .main-content > .right-sidebar .trending-user {
