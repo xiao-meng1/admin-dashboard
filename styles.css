@@ -2,6 +2,7 @@
     --blue-color: #1992d4;
     --yellow-color: #facc15;
     --grey-color: #e2e8f0;
+    --grey-box-shadow-color: #cdd2d9;
     --white-color: #ffffff;
 }
 
@@ -68,7 +69,7 @@ html, body, #body-container {
     grid-area: header;
     display: grid;
     grid-template-columns: 1fr 300px;
-    grid-template-rows: 1fr 2fr;
+    grid-template-rows: 1fr 1.5fr;
     grid-template-areas:
         "search user-options"
         "user-greeting http-options";
@@ -158,10 +159,17 @@ html, body, #body-container {
 .left-sidebar > .icon-container {
     display: grid;
     gap: 20px;
-    padding-left: 7px;
+    padding-left: 9px;
 }
 
-.left-sidebar > .icon-container > .icon, .logo {
+.left-sidebar > .logo {
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto 1fr;
+    gap: 16px;
+}
+
+.left-sidebar > .icon-container > .icon {
     display: grid;
     align-items: center;
     grid-template-columns: auto 1fr;
@@ -279,4 +287,9 @@ html, body, #body-container {
 
 .svg-icon-small {
     height: 30px;
+}
+
+.box-shadow {
+    z-index: 10;
+    box-shadow: var(--grey-box-shadow-color) 4px 4px 4px;
 }
