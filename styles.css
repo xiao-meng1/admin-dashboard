@@ -1,6 +1,6 @@
 :root {
     --blue-color: #1992d4;
-    --yellow-color: #f0b429;
+    --yellow-color: #facc15;
     --grey-color: #e2e8f0;
     --white-color: #ffffff;
 }
@@ -77,9 +77,10 @@ html, body, #body-container {
     grid-area: search;
     display: grid;
     grid-template-columns: 60px 1fr;
+    align-items: stretch;
 }
 
-.header >.search > input {
+.header >.search > #search-input {
     background-color: var(--grey-color);
     border-radius: 40px;
 }
@@ -92,12 +93,24 @@ html, body, #body-container {
     padding: 0 40px;
 }
 
+.header > .user-options > .user-photo {
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--yellow-color);
+}
+
 .header > .user-greeting {
     grid-area: user-greeting;
     display: grid;
     grid-template-columns: 80px 1fr;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
+}
+
+.header > .user-greeting > .user-photo {
+    height: 80px;
+    border-radius: 50%;
+    background-color: var(--yellow-color);
 }
 
 .header > .http-options {
