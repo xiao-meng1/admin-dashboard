@@ -1,5 +1,13 @@
+:root {
+    --blue-color: #1992d4;
+    --yellow-color: #f0b429;
+    --grey-color: #e2e8f0;
+    --white-color: #ffffff;
+}
+
 * {
     box-sizing: border-box;
+    font-family: "roboto", sans-serif;
 }
 
 ul {
@@ -8,12 +16,25 @@ ul {
     margin: 0;
 }
 
-p {
+h1, h2, h3, h4, p {
     margin: 0;
 }
 
 h1 {
-    margin: 0;
+    font-size: 30px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+h3 {
+    font-size: 15px;
+}
+
+h4 {
+    font-size: 15px;
+    font-weight: 100;
 }
 
 .border {
@@ -30,26 +51,32 @@ html, body, #body-container {
     grid-template-columns: 1fr 6fr;
     grid-template-rows: 1fr 5fr;
     grid-template-areas:
-        "sidebar header"
-        "sidebar main-content";
+        "left-sidebar header"
+        "left-sidebar main-content";
 }
 
 .header {
     grid-area: header;
     display: grid;
     grid-template-columns: 1fr 300px;
-    grid-template-rows: 1fr 2fr;
+    grid-template-rows: 1fr 3fr;
     grid-template-areas:
         "search user-options"
         "user-greeting http-options";
     padding: 10px 60px;
     gap: 20px;
+    background-color: var(--white-color);
 }
 
 .header > .search {
     grid-area: search;
     display: grid;
     grid-template-columns: 60px 1fr;
+}
+
+.header >.search > input {
+    background-color: var(--grey-color);
+    border-radius: 40px;
 }
 
 .header > .user-options {
@@ -76,18 +103,33 @@ html, body, #body-container {
     padding: 20px 0;
 }
 
+.header > .http-options > form {
+    display: grid;
+    align-items: center;
+}
+
 .header > .http-options > form > button {
     height: 30px;
     width: 100%;
     border-radius: 15px;
+    background-color: var(--blue-color);
+    color: var(--white-color);
 }
 
-.sidebar {
-    grid-area: sidebar;
+.left-sidebar {
+    grid-area: left-sidebar;
     display: grid;
     grid-template-rows: auto auto auto 1fr;
     gap: 40px;
-    padding: 10px;
+    padding: 10px 20px;
+    background-color: var(--blue-color);
+    color: var(--white-color);
+}
+
+.left-sidebar > .icon-container > .icon {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 20px;
 }
 
 .main-content {
@@ -98,6 +140,7 @@ html, body, #body-container {
         "projects right-sidebar";
     padding: 30px 20px;
     gap: 20px;
+    background-color: var(--grey-color);
 }
 
 .main-content > .projects-area {
@@ -107,10 +150,15 @@ html, body, #body-container {
 .main-content > .projects-area > .projects-container {
     grid-area: projects;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     grid-template-rows: 220px;
     grid-auto-rows: 220px;
     gap: 20px;
+}
+
+.main-content >.projects-area .project-card {
+    border-radius: 10px;
+    background-color: var(--white-color);
 }
 
 .main-content > .right-sidebar {
@@ -122,12 +170,15 @@ html, body, #body-container {
 
 .main-content > .right-sidebar .announcement {
     padding: 20px;
+    background-color: var(--white-color);
 }
 
 .main-content > .right-sidebar .trending-user {
     display: grid;
-    grid-auto-flow: column;
+    grid-template-columns: auto 1fr;
+    justify-items: start;
     align-items: center;
     padding: 20px;
     gap: 20px;
+    background-color: var(--white-color);
 }

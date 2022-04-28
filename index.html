@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <title>Admin Dashboard</title>
 </head>
 <body>
@@ -17,7 +20,7 @@
             <ul class="user-options">
                 <li class="border">bell</li>
                 <li class="border">icon</li>
-                <li class="border">Xiao Meng</li>
+                <li class="border"><h2>Xiao Meng</h2></li>
             </ul>
             <div class="user-greeting border">
                 <div>Icon</div>
@@ -38,27 +41,47 @@
                 </form>
             </ul>
         </div>
-        <div class="sidebar border">
+        <div class="left-sidebar border">
             <h1 class="logo">Dashboard</h1>
             <ul class="icon-container">
-                <li class="icon">Home</li>
-                <li class="icon">Profile</li>
-                <li class="icon">Messages</li>
-                <li class="icon">History</li>
-                <li class="icon">Tasks</li>
-                <li class="icon">Communities</li>
+                <li class="icon">
+                    <img id="svg" src="./icons/home_white_24dp.svg">
+                    <h2>Home</h2>
+                </li>
+                <li class="icon">
+                    <img id="svg" src="./icons/account_circle_white_24dp.svg">
+                    <h2>Profile</h2>
+                </li>
+                <li class="icon">
+                    <img id="svg" src="./icons/mode_comment_white_24dp.svg">
+                    <h2>Messages</h2>
+                </li>
+                <li class="icon">
+                    <img id="svg" src="./icons/history_white_24dp.svg">
+                    <h2>History</h2>
+                </li>
+                <li class="icon">
+                    <img id="svg" src="./icons/format_list_bulleted_white_24dp.svg">
+                    <h2>Tasks</h2>
+                </li>
+                <li class="icon">
+                    <img id="svg" src="./icons/groups_white_24dp.svg">
+                    <h2>Communities</h2>
+                </li>
             </ul>
             <ul class="icon-container">
-                <li class="icon">Settings</li>
-                <li class="icon">Support</li>
-                <li class="icon">Privacy</li>
+                <li class="icon"><h2>Settings</h2></li>
+                <li class="icon"><h2>Support</h2></li>
+                <li class="icon"><h2>Privacy</h2></li>
             </ul>
         </div>
         <div class="main-content border">
             <div class="projects-area">
-                Your Projects
+                <h2>Your Projects</h2>
                 <div class="projects-container border">
-                    <div class="project-card border"></div>
+                    <div class="project-card border">
+                        
+                    </div>
                     <div class="project-card border"></div>
                     <div class="project-card border"></div>
                     <div class="project-card border"></div>
@@ -68,7 +91,7 @@
             </div>
             <div class="right-sidebar">
                 <div class="announcements-area border">
-                    Announcements
+                    <h2>Announcements</h2>
                     <div class="announcements-container border">
                         <div class="announcement border">Site Maintenance</div>
                         <div class="announcement border">Community Share Day</div>
@@ -76,7 +99,7 @@
                     </div>
                 </div>
                 <div class="trending-area border">
-                    Trending
+                    <h2>Trending</h2>
                     <div class="trending-users-container border">
                         <div class="trending-user border">
                             <div>icon</div>
