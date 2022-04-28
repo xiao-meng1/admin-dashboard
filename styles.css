@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+.border {
+    border: solid black 2px;
+}
+
+html, body, #body-container {
+    height: 100%;
+    margin: 0;
+}
+
+#body-container {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    grid-template-rows: 1fr 5fr;
+    grid-template-areas:
+        "sidebar header"
+        "sidebar main-content";
+}
+
+.header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    grid-template-rows: 1fr 2fr;
+    grid-template-areas:
+        "search user-options"
+        "user-greeting http-options";
+    padding: 10px 60px;
+    gap: 20px;
+}
+
+.header > .search {
+    grid-area: search;
+    display: grid;
+    grid-template-columns: 60px 1fr;
+}
+
+.header > .user-options {
+    grid-area: user-options;
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    padding: 0 40px;
+}
+
+.header > .user-greeting {
+    grid-area: user-greeting;
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    align-items: center;
+    gap: 10px;
+}
+
+.header > .http-options {
+    grid-area: http-options;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.header > .http-options > form > button {
+    height: 30px;
+    width: 100%;
+    border-radius: 15px;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    display: grid;
+    grid-template-rows: auto auto auto 1fr;
+    gap: 40px;
+    padding: 10px;
+}
+
+.main-content {
+    grid-area: main-content;
+}
