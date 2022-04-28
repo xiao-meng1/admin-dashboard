@@ -240,12 +240,31 @@ html, body, #body-container {
     gap: 10px;
 }
 
+.main-content > .right-sidebar .trending-users-container {
+    display: grid;
+    gap: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--white-color);
+}
+
 .main-content > .right-sidebar .trending-user {
     display: grid;
     grid-template-columns: auto 1fr;
     justify-items: start;
     align-items: center;
-    padding: 20px;
     gap: 20px;
     background-color: var(--white-color);
+    padding-bottom: 10px;
+    border-bottom: solid var(--grey-color) 2px;
+}
+
+.main-content > .right-sidebar .trending-user:last-child {
+    border-bottom: none;
+}
+
+.main-content > .right-sidebar img {
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--yellow-color);
 }
